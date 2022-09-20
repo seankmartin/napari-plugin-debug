@@ -3,7 +3,7 @@ from magicgui import magic_factory
 from qtpy.QtWidgets import QVBoxLayout, QPushButton, QWidget, QLineEdit
 
 def example(input_string: str) -> str:
-    output_string = f"You entered {input_string}!"
+    output_string = f"You entered {input_string}!" if input_string else "Please enter something in the text box."
     print(output_string)
     return output_string
 
