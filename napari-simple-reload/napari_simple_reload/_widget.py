@@ -6,8 +6,7 @@ import sys
 from napari.utils.notifications import notification_manager, Notification, NotificationSeverity, show_console_notification
 
 my_plugin_logger = logging.getLogger("napari_simple_reload")
-my_plugin_logger.setLevel(logging.WARNING)
-stdout_handler = logging.StreamHandler(sys.stdout)
+stdout_handler = logging.StreamHandler(sys.stderr)
 stdout_handler.setFormatter(
     logging.Formatter(
         fmt="%(levelname)s: %(asctime)s %(message)s",
@@ -15,6 +14,7 @@ stdout_handler.setFormatter(
     )
 )
 my_plugin_logger.addHandler(stdout_handler)
+my_plugin_logger.setLevel(logging.WARNING)
 
 def show_debug(message: str):
     """
