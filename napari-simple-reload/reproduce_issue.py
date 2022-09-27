@@ -12,7 +12,7 @@ for value in values_to_test:
 
 run()
 
-# Ouput is:
+# Output is:
 # You entered False!
 # You entered 0!
 # You entered None!
